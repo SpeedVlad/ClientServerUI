@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:controller="com.example.demo6.HelloController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <ListView fx:id="listMessages" prefHeight="340.0" prefWidth="422.0" />
+                <Label layoutX="433.0" layoutY="14.0" prefHeight="20.0" prefWidth="149.0" text="Write host" />
+                <TextField fx:id="textFieldHost" layoutX="433.0" layoutY="40.0" promptText="Enter server host" />
+                <Label layoutX="433.0" layoutY="76.0" prefHeight="20.0" prefWidth="149.0" text="Write port" />
+                <TextField fx:id="textFieldPort" layoutX="433.0" layoutY="103.0" promptText="Enter server port" />
+                <Label layoutX="433.0" layoutY="142.0" prefHeight="20.0" prefWidth="149.0" text="Write your name" />
+                <TextField fx:id="textFieldName" layoutX="433.0" layoutY="170.0" promptText="Enter your name" />
+                <Button fx:id="buttonConnect" layoutX="461.0" layoutY="208.0" mnemonicParsing="false" onAction="#buttonConnect" prefHeight="33.0" prefWidth="94.0" text="Connect" />
+                <TextField fx:id="textFieldMessage" layoutY="354.0" prefHeight="33.0" prefWidth="352.0" promptText="Enter message">
+                    <font>
+                        <Font size="16.0" />
+                    </font></TextField>
+                <Button fx:id="buttonSend" layoutX="363.0" layoutY="354.0" mnemonicParsing="false" onAction="#buttonSend" prefHeight="35.0" prefWidth="59.0" text="Send" />
+                <Label fx:id="status" alignment="CENTER" layoutX="428.0" layoutY="256.0" prefHeight="25.0" prefWidth="156.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
