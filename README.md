@@ -270,23 +270,6 @@ mvn javafx:run -e
 
 ---
 
-##  Perfect For Sixth Form Application
-
-This project demonstrates:
-- **Network Understanding** - How internet communication works
-- **Java Skills** - OOP and advanced programming
-- **GUI Design** - Professional user interfaces
-- **Problem-Solving** - Building complex applications
-- **Software Architecture** - Organizing large projects
-
-When presenting, explain:
-- How client-server model works
-- Why multi-threading is necessary
-- How sockets enable network communication
-- How the GUI responds to events
-
----
-
 ##  Enhancement Ideas
 
 Ways to improve this project:
