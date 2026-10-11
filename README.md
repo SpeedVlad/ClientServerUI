@@ -1,103 +1,102 @@
-#  ClientServerUI - Chat Application
+# ClientServerUI - JavaFX Chat Client
 
-A **Java Desktop Chat Application** with a graphical user interface built using **JavaFX**. This project demonstrates network programming, multi-threading, and professional GUI design. Perfect for learning how client-server communication works!
+A Java desktop chat client with a graphical user interface built using JavaFX. This project demonstrates socket-based client communication, multi-threading, and GUI development in Java. It is designed to connect to an external TCP chat server and display incoming messages in a desktop interface.
 
----
-
-##  About This Project
-
-ClientServerUI is a Java desktop application that demonstrates:
-- **Network Programming** - Socket communication between client and server
-- **Multi-Threading** - Handling concurrent connections
-- **GUI Development** - JavaFX user interface
-- **Event-Driven Programming** - Responding to user actions
-- **Stream I/O** - Reading and writing data over networks
-
-A fully functional chat application where multiple users can connect to a server and exchange messages in real-time!
+> Note: This repository contains the client-side application only. It does not include a server implementation in the project itself.
 
 ---
 
-##  Key Features
+## About This Project
 
-###  **Client-Server Architecture**
-- Connect to a remote chat server
-- Real-time message exchange
-- Multiple users can chat simultaneously
-- Graceful disconnect handling
+ClientServerUI is a JavaFX application that demonstrates:
+- JavaFX GUI development
+- Socket communication with a remote server
+- Multi-threading for background network operations
+- Event-driven UI handling
+- Stream I/O for sending and receiving data
 
-###  **Professional GUI**
+This project provides a chat client interface for connecting to a compatible server and exchanging messages in real time.
+
+---
+
+## Key Features
+
+### Client Connection
+- Connect to a remote chat server using host and port
+- Enter a nickname before joining the chat
+- Handle connection errors gracefully
+- Disconnect cleanly by closing the socket or sending an exit command
+
+### Professional GUI
 - Clean, intuitive interface built with JavaFX
 - Message history displayed in a ListView
 - Input fields for host, port, nickname, and messages
 - Status indicator for connection state
 - Send button for message submission
 
-###  **Network Features**
+### Network Features
 - TCP socket communication
-- Automatic connection management
-- Server host and port configuration
-- Message broadcasting to all connected clients
+- Client-side message sending and receiving
+- Connection configuration through the UI
+- Real-time display of incoming chat data
 
-###  **User Management**
-- Custom nickname entry
-- User join/leave notifications
-- Message sender identification
-
-###  **Real-Time Messaging**
-- Live message display
-- Message history in scrollable list
-- Input field auto-clearing after send
-- Connection status feedback
+### User Experience
+- Simple message input flow
+- Auto-clear message field after send
+- Status updates for connection events
+- Chat history tracking in the UI
 
 ---
 
-##  Technologies Used
+## Technologies Used
 
 | Technology | Purpose |
 |-----------|---------|
-| **Java 19** | Core programming language |
-| **JavaFX 19** | GUI framework |
-| **Socket API** | Network communication |
-| **Threading** | Concurrent message handling |
-| **Maven** | Project build and dependency management |
+| Java 19 | Core programming language |
+| JavaFX 19 | GUI framework |
+| Socket API | Client-server communication |
+| Threading | Background message handling |
+| Maven | Project build and dependency management |
 
 ---
 
-##  Project Structure
+## Project Structure
 
-```
+```text
 ClientServerUI/
 ├── src/main/java/com/example/demo6/
-│   ├── HelloApplication.java    # Main JavaFX application
-│   ├── HelloController.java     # Controller with chat logic
-│   └── module-info.java         # Module configuration
+│   ├── HelloApplication.java    # JavaFX application entry point
+│   ├── HelloController.java     # Chat client logic and socket handling
+│   └── module-info.java         # Java module configuration
 ├── src/main/resources/
 │   ├── com/example/demo6/
 │   │   └── hello-view.fxml      # JavaFX layout file
 │   └── icon.png                 # Application icon
 ├── pom.xml                      # Maven configuration
+├── mvnw                         # Maven wrapper
+├── mvnw.cmd                     # Maven wrapper for Windows
 └── README.md                    # This file
 ```
 
 ---
 
-##  How to Use
+## How to Use
 
 ### Installation
 
-1. **Install Java 19 or Higher**
+1. Install Java 19 or Higher
    - Download from [oracle.com](https://www.oracle.com/java/technologies/downloads/)
 
-2. **Install Maven** (if not already installed)
+2. Install Maven (if not already installed)
    - Download from [maven.apache.org](https://maven.apache.org/download.cgi)
 
-3. **Clone the Repository**
+3. Clone the Repository
    ```bash
    git clone https://github.com/SpeedVlad/ClientServerUI.git
    cd ClientServerUI
    ```
 
-4. **Build the Project**
+4. Build the Project
    ```bash
    mvn clean package
    ```
@@ -113,213 +112,197 @@ Or run the JAR file after building:
 java -jar target/demo6-1.0-SNAPSHOT.jar
 ```
 
+### Required Server
+
+This repository contains only the client. To use the application, you need a compatible chat server running elsewhere that accepts TCP socket connections and broadcasts messages to connected clients.
+
 ---
 
-##  How to Use the Chat
+## How to Use the Chat
 
 ### Step-by-Step Guide
 
-1. **Enter Server Details**
-   - **Host**: IP address or hostname of the server (e.g., "localhost")
-   - **Port**: Port number the server is listening on (e.g., "5000")
-   - **Nickname**: Your display name in the chat
-
-2. **Connect to Server**
-   - Click **"Connect"** button
-   - Wait for connection confirmation
-   - Check status label for connection state
-
-3. **Send Messages**
-   - Type your message in the text field at the bottom
-   - Click **"Send"** button or press Enter
-   - Message appears in the chat history
-
-4. **Receive Messages**
-   - Messages from other users appear automatically
-   - Scroll up to see message history
-   - See who sent each message
-
-5. **Disconnect**
-   - Type "exit!" and send to disconnect
-   - Or close the application window
+1. Start a compatible chat server on a host and port.
+2. Enter the server details in the UI:
+   - Host: IP address or hostname of the server (for example, `localhost`)
+   - Port: Port number the server is listening on
+   - Nickname: Your display name in the chat
+3. Click the Connect button.
+4. Wait for the connection to be established.
+5. Type your message into the message field.
+6. Click Send or press Enter.
+7. Incoming messages from the server appear in the message list.
+8. Use the exit command (`exit!`) or close the application to disconnect.
 
 ---
 
-##  Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 
- **Network Programming**
-- Creating TCP sockets
-- Sending and receiving data over network
-- Client-server model
-- Connection management
-
- **Multi-Threading**
-- Thread creation and management
-- Concurrent message handling
-- Avoiding UI blocking with threads
-- Thread synchronization
-
- **GUI Programming with JavaFX**
+### JavaFX Programming
 - FXML layout files
 - Controller classes
 - Event handling
 - Dynamic UI updates
 
- **Java Programming Concepts**
-- Classes and objects
-- Exception handling (try-catch)
-- Input/Output streams
-- BufferedReader and PrintWriter
+### Network Programming
+- Creating TCP socket connections
+- Sending and receiving data over network streams
+- Client-side communication with a server
+- Connection management
 
- **Software Architecture**
-- Separation of concerns
-- Model-View-Controller pattern
-- Client-server architecture
+### Multi-Threading
+- Using background threads for network communication
+- Preventing UI blocking while reading or sending data
+- Working with asynchronous server responses
+
+### Java Programming Concepts
+- Classes and objects
+- Exception handling
+- Input/output streams
+- BufferedReader and PrintWriter
 
 ---
 
-##  Code Breakdown
+## Code Breakdown
 
 ### Main Components
 
-**`HelloApplication.java`** - Application Entry Point
+**HelloApplication.java** - Application entry point
 ```java
 - Extends Application (JavaFX)
-- Loads FXML layout file
+- Loads the FXML layout
 - Sets up the main window
-- Loads application icon
+- Loads the application icon
 ```
 
-**`HelloController.java`** - Main Logic
+**HelloController.java** - Main client logic
 ```java
 - Handles GUI events
 - Manages client connection
-- Inner Client class handles networking
-- Separate threads for sending/receiving
+- Uses a dedicated client class for networking
+- Starts separate threads for sending and receiving messages
 ```
 
-**`hello-view.fxml`** - Layout Definition
+**hello-view.fxml** - Layout definition
 ```java
-- Defines all GUI components
-- TextFields for connection settings
-- ListView for message history
-- Buttons for actions
-- Labels for status display
+- Defines the GUI components
+- Contains fields for host, port, nickname, and message input
+- Includes the message list and connection status display
+- Provides buttons for connection and sending actions
 ```
 
 ---
 
-##  How the Chat Works
+## Client-Side Message Flow
 
 ### Connection Flow
 
-1. User enters server details (host, port, nickname)
-2. Clicks "Connect" button
+1. User enters host, port, and nickname
+2. Clicks Connect
 3. Application creates a Socket connection
-4. Sends nickname to server
-5. Server broadcasts "username joined the chat"
-6. Starts listening for incoming messages
+4. Sends the nickname to the server
+5. Starts reading incoming messages from the server
 
 ### Message Flow
 
-1. User types message in TextField
-2. Clicks "Send" button
-3. Message sent to server via PrintWriter
-4. Server broadcasts to all connected clients
-5. Message appears in all clients' message lists
+1. User types a message in the input field
+2. Clicks Send or presses Enter
+3. Message is sent via PrintWriter to the server
+4. The server may broadcast it to other connected clients
+5. Incoming messages are added to the JavaFX ListView
 
 ### Disconnection Flow
 
-1. User sends "exit!" message
-2. Client connection closes
-3. Server notifies other users
-4. Application window can be closed
+1. User sends `exit!` or closes the client
+2. Socket is closed
+3. Client disconnects from the server
 
 ---
 
-##  Troubleshooting
+## Troubleshooting
 
-### "Connection refused" Error
-- Make sure server is running
-- Check host and port are correct
-- Server may be on different computer
+### Connection refused
+- Make sure the server is running
+- Check that the host and port are correct
+- Verify the server is reachable from the machine running the client
 
-### "Incorrect host or port" Message
-- Verify hostname/IP address
-- Verify port number is correct
+### Incorrect host or port
+- Verify hostname or IP address
+- Confirm the port number matches the server configuration
 - Check network connectivity
 
 ### Messages not sending
-- Check that you're connected
-- Verify message field is not empty
-- Check status label for connection state
+- Ensure you are connected to a server
+- Check that the message field is not empty
+- Confirm the server is still active and accepting connections
 
 ### Build errors with Maven
 ```bash
-# Update Maven
+# Check Maven installation
 mvn --version
 
 # Clean build
 mvn clean install
 
-# Run with debug
+# Run with debug output
 mvn javafx:run -e
 ```
 
 ---
 
-##  Enhancement Ideas
+## Enhancement Ideas
 
-Ways to improve this project:
+Possible improvements for this project:
 
-1. **File Sharing**
+1. File sharing
    - Send files through the chat
-   - Automatic file download
+   - Add automatic download support
 
-2. **User Authentication**
-   - Login with username/password
-   - Encrypted connections (SSL/TLS)
+2. User authentication
+   - Login with username and password
+   - Add encrypted communication (SSL/TLS)
 
-3. **Message Features**
-   - Timestamps for messages
-   - Private messages between users
-   - Message history storage
+3. Message features
+   - Add timestamps
+   - Support private messages
+   - Save chat history locally
 
-4. **Server Improvements**
-   - Web-based server management
-   - User ban/kick functionality
-   - Message filtering
+4. UI improvements
+   - Display connected users
+   - Add emoji support
+   - Improve styling and layout
 
-5. **Advanced UI**
-   - User list display
-   - Emoji support
-   - Message styling
+5. Server integration
+   - Add a matching Java server implementation
+   - Support multi-user broadcasting and chat rooms
 
 ---
 
-##  Configuration
+## Configuration
 
 ### Server Setup
 
-To use this client, you need a chat server running. The server should:
-- Listen on specified port
-- Accept client connections
-- Broadcast messages to all clients
-- Handle user join/leave events
+To use this client, you need a server that:
+- Listens on a known port
+- Accepts client connections
+- Receives and broadcasts messages
+- Handles user join/leave events
 
 ### Connection Settings
 
-Default recommended settings:
-- **Host**: `localhost` (for local testing)
-- **Port**: `5000` or `8080`
-- **Nickname**: Your chosen name
+Default recommended sample values:
+- Host: `localhost` (for local testing)
+- Port: `5000` or `8080`
+- Nickname: your chosen display name
+
+> This repository does not include the server implementation. The values above are examples for a compatible external server.
 
 ---
 
 **Created by:** SpeedVlad  
-**Type:** Desktop Application / Learning Project  
-**Difficulty:** Intermediate to Advanced  
+**Type:** Desktop Client / Learning Project  
+**Difficulty:** Intermediate  
 **Technologies:** Java, JavaFX, Maven, Sockets  
-**Time to Build:** Excellent for learning network programming
+**Time to Build:** Good for learning client-side networking and JavaFX UI development
