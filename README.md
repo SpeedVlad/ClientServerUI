@@ -1,10 +1,10 @@
-# 💬 ClientServerUI - Chat Application
+#  ClientServerUI - Chat Application
 
 A **Java Desktop Chat Application** with a graphical user interface built using **JavaFX**. This project demonstrates network programming, multi-threading, and professional GUI design. Perfect for learning how client-server communication works!
 
 ---
 
-## 📋 About This Project
+##  About This Project
 
 ClientServerUI is a Java desktop application that demonstrates:
 - **Network Programming** - Socket communication between client and server
@@ -17,33 +17,33 @@ A fully functional chat application where multiple users can connect to a server
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 💻 **Client-Server Architecture**
+###  **Client-Server Architecture**
 - Connect to a remote chat server
 - Real-time message exchange
 - Multiple users can chat simultaneously
 - Graceful disconnect handling
 
-### 🎨 **Professional GUI**
+###  **Professional GUI**
 - Clean, intuitive interface built with JavaFX
 - Message history displayed in a ListView
 - Input fields for host, port, nickname, and messages
 - Status indicator for connection state
 - Send button for message submission
 
-### 🔌 **Network Features**
+###  **Network Features**
 - TCP socket communication
 - Automatic connection management
 - Server host and port configuration
 - Message broadcasting to all connected clients
 
-### 👤 **User Management**
+###  **User Management**
 - Custom nickname entry
 - User join/leave notifications
 - Message sender identification
 
-### 📊 **Real-Time Messaging**
+###  **Real-Time Messaging**
 - Live message display
 - Message history in scrollable list
 - Input field auto-clearing after send
@@ -51,7 +51,7 @@ A fully functional chat application where multiple users can connect to a server
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 | Technology | Purpose |
 |-----------|---------|
@@ -63,7 +63,7 @@ A fully functional chat application where multiple users can connect to a server
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 ClientServerUI/
@@ -81,7 +81,7 @@ ClientServerUI/
 
 ---
 
-## 🚀 How to Use
+##  How to Use
 
 ### Installation
 
@@ -115,7 +115,7 @@ java -jar target/demo6-1.0-SNAPSHOT.jar
 
 ---
 
-## 📖 How to Use the Chat
+##  How to Use the Chat
 
 ### Step-by-Step Guide
 
@@ -145,42 +145,42 @@ java -jar target/demo6-1.0-SNAPSHOT.jar
 
 ---
 
-## 💡 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates:
 
-✅ **Network Programming**
+ **Network Programming**
 - Creating TCP sockets
 - Sending and receiving data over network
 - Client-server model
 - Connection management
 
-✅ **Multi-Threading**
+ **Multi-Threading**
 - Thread creation and management
 - Concurrent message handling
 - Avoiding UI blocking with threads
 - Thread synchronization
 
-✅ **GUI Programming with JavaFX**
+ **GUI Programming with JavaFX**
 - FXML layout files
 - Controller classes
 - Event handling
 - Dynamic UI updates
 
-✅ **Java Programming Concepts**
+ **Java Programming Concepts**
 - Classes and objects
 - Exception handling (try-catch)
 - Input/Output streams
 - BufferedReader and PrintWriter
 
-✅ **Software Architecture**
+ **Software Architecture**
 - Separation of concerns
 - Model-View-Controller pattern
 - Client-server architecture
 
 ---
 
-## 🎯 Code Breakdown
+##  Code Breakdown
 
 ### Main Components
 
@@ -211,7 +211,7 @@ This project demonstrates:
 
 ---
 
-## 🔧 How the Chat Works
+##  How the Chat Works
 
 ### Connection Flow
 
@@ -239,7 +239,7 @@ This project demonstrates:
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### "Connection refused" Error
 - Make sure server is running
@@ -270,7 +270,7 @@ mvn javafx:run -e
 
 ---
 
-## 🎓 Perfect For Sixth Form Application
+##  Perfect For Sixth Form Application
 
 This project demonstrates:
 - **Network Understanding** - How internet communication works
@@ -287,7 +287,7 @@ When presenting, explain:
 
 ---
 
-## 💡 Enhancement Ideas
+##  Enhancement Ideas
 
 Ways to improve this project:
 
@@ -316,7 +316,7 @@ Ways to improve this project:
 
 ---
 
-## 📝 Configuration
+##  Configuration
 
 ### Server Setup
 
